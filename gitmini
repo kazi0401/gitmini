@@ -6,11 +6,8 @@ def run():
     parser = handler.build_parser()
     args = parser.parse_args()
 
-    res = args.run_command()
+    res = args.run()
     print(res)
-
-
-
 
 
 if __name__ == "__main__":

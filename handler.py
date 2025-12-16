@@ -13,7 +13,7 @@ def build_parser() -> argparse.ArgumentParser:
     # init command
     init_parser = subparsers.add_parser('init')
     init_parser.set_defaults(
-        run_command = commands.init.run
+        run = commands.init.run
     )
     
     # commit command
@@ -23,7 +23,7 @@ def build_parser() -> argparse.ArgumentParser:
         type = str,
         help = '')
     commit_parser.set_defaults(
-        run_command = commands.commit.run
+        run = commands.commit.run
     )
 
     # checkout command
@@ -34,13 +34,13 @@ def build_parser() -> argparse.ArgumentParser:
         help = ''
     )
     checkout_parser.set_defaults(
-        run_command = commands.checkout.run
+        run = commands.checkout.run
     )
 
     # log command
     log_parser = subparsers.add_parser('log')
     log_parser.set_defaults(
-        run_command = commands.log.run
+        run = commands.log.run
     )
 
     # tree command
@@ -52,7 +52,7 @@ def build_parser() -> argparse.ArgumentParser:
         help = ''
     )
     tree_parser.set_defaults(
-        run_command = commands.tree.run
+        run = commands.tree.run
     )
 
     # diff command
@@ -68,7 +68,7 @@ def build_parser() -> argparse.ArgumentParser:
         help = ''
     )
     diff_parser.set_defaults(
-        run_command = commands.diff.run
+        run = commands.diff.run
     )
 
     # similarity command
@@ -84,7 +84,7 @@ def build_parser() -> argparse.ArgumentParser:
         help = ''
     )
     similarity_parser.set_defaults(
-        run_command = commands.similarity.run
+        run = commands.similarity.run
     )
 
     # branch command
@@ -95,7 +95,7 @@ def build_parser() -> argparse.ArgumentParser:
         help = ''
     )
     branch_parser.set_defaults(
-        run_command = commands.branch.run
+        run = commands.branch.run
     )
 
     # cat_object command
@@ -106,12 +106,12 @@ def build_parser() -> argparse.ArgumentParser:
         help = ''
     )
     cat_parser.set_defaults(
-        run_command = commands.cat_object.run
+        run = commands.cat_object.run
     )
 
     status_parser = subparsers.add_parser('status')
     status_parser.set_defaults(
-        run_command = commands.status.run
+        run = commands.status.run
     )
 
     return parser
