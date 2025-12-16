@@ -48,6 +48,7 @@ def build_parser() -> argparse.ArgumentParser:
     tree_parser.add_argument(
         'commit_hash',
         type = str,
+        default = 'HEAD',
         help = ''
     )
     tree_parser.set_defaults(
