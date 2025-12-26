@@ -1,4 +1,5 @@
+from objects import repo_manager
 
 def run() -> bool:
-    print('init!')
+    rm = repo_manager.RepoManager()
     return True
